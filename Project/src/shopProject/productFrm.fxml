@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="169.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopProject.ProductFrmController">
+   <children>
+      <Button defaultButton="true" layoutX="216.0" layoutY="116.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Label layoutX="24.0" layoutY="43.0" text="Name" />
+      <Label layoutX="24.0" layoutY="74.0" text="Price" />
+      <TextField fx:id="name" layoutX="69.0" layoutY="39.0" prefHeight="25.0" prefWidth="188.0" />
+      <Spinner fx:id="price" editable="true" layoutX="69.0" layoutY="70.0" prefHeight="25.0" prefWidth="188.0">
+         <valueFactory>
+            <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.1" initialValue="2.1" max="500.0" min="0.0" />
+         </valueFactory>
+      </Spinner>
+      <Label fx:id="title" layoutX="7.0" layoutY="1.0" text="Add New Product">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutY="28.0" prefHeight="1.0" prefWidth="173.0" />
+   </children>
+</AnchorPane>

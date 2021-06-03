@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopProject.BaseController">
+    <left>
+        <VBox prefHeight="426.0" prefWidth="119.0" style="-fx-background-color: #e9e9e9;" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#viewProducts" prefHeight="25.0" prefWidth="103.0" text="Products">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin></Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#viewOrders" prefHeight="25.0" prefWidth="103.0" text="Orders">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#viewCustomers" prefHeight="25.0" prefWidth="103.0" text="Customers">
+               <VBox.margin>
+                  <Insets bottom="35.0" />
+               </VBox.margin>
+            </Button>
+                <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="103.0" text="Add">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="editBTN" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="103.0" text="Edit">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="deleteBTN" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="103.0" text="Delete" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </left>
+   <top>
+      <HBox fx:id="hbox" prefHeight="47.0" prefWidth="900.0" style="-fx-background-color: #e9e9e9;" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fx:id="logo" fitHeight="50.0" fitWidth="120.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logIn" alignment="BOTTOM_RIGHT" cache="true" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#login" text="Log In">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="30.0" top="12.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="greetLabel">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="17.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="reg" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#register" text="Register">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="12.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="logout" alignment="BOTTOM_RIGHT" layoutX="230.0" layoutY="22.0" mnemonicParsing="false" onAction="#logout" text="Log Out">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="12.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="235.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopProject.OrderFrmController">
+   <children>
+      <Label layoutX="9.0" layoutY="1.0" text="Make Order">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="28.0" prefHeight="1.0" prefWidth="130.0" />
+      <Label layoutX="32.0" layoutY="46.0" prefHeight="17.0" prefWidth="63.0" text="Customer:" />
+      <Label layoutX="44.0" layoutY="94.0" text="Product:" />
+      <Label layoutX="330.0" layoutY="94.0" text="Unit Price:" />
+      <Label layoutX="41.0" layoutY="131.0" text="Quantity:" />
+      <Label layoutX="59.0" layoutY="174.0" text="Total:" />
+      <TextField fx:id="customer" editable="false" layoutX="96.0" layoutY="43.0" prefHeight="25.0" prefWidth="215.0" />
+      <ComboBox fx:id="products" layoutX="97.0" layoutY="90.0" onAction="#comboAction" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="price" editable="false" layoutX="391.0" layoutY="91.0" prefHeight="25.0" prefWidth="97.0" />
+      <Spinner fx:id="quantity" layoutX="97.0" layoutY="127.0">
+           <valueFactory>
+               <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="2" max="500" min="1" />
+           </valueFactory>
+
+      </Spinner>
+      <TextField fx:id="total" editable="false" layoutX="97.0" layoutY="171.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button defaultButton="true" layoutX="312.0" layoutY="173.0" mnemonicParsing="false" onAction="#order" prefHeight="37.0" prefWidth="90.0" text="Order" />
+   </children>
+</AnchorPane>
